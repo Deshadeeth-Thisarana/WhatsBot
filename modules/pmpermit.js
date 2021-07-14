@@ -139,7 +139,7 @@ async function handler(id) {
         } else {
             var out = ({
                 mute: false,
-                msg: `*✋ Wait*\n\nPlease wait until I will get back to Online, Kindly don't send another message.`
+                msg: `*Hey guy, I am the assistant of Deshadeeth. \n\nMy master isn't online now. Please wait until he will get back to Online, Kindly don't send another messages. If you send several messages you will be blocked`
             })
             return out
         }
@@ -147,7 +147,7 @@ async function handler(id) {
         if (read.times == 4) {
             var out = ({
                 mute: true,
-                msg: `*✋ Muted*\n\nYou have been muted for ${config.pmpermit_mutetime/60} Minutes for spamming.`
+                msg: `*Muted 🔇*\n\nYou have been muted for ${config.pmpermit_mutetime/60} Minutes for spamming.`
             })
             return out
         } else { // Update times
@@ -157,7 +157,7 @@ async function handler(id) {
             } else {
                 var out = ({
                     mute: false,
-                    msg: `*✋ Wait*\n\nPlease wait until I will get back to Online, Kindly don't send another message. You have ${read.times} warning(s).`
+                    msg: `*✋ Wait*\n\nPlease wait until my master will get back to Online, Kindly don't send another message. You have ${read.times} warning(s).`
                 })
                 return out
             }
